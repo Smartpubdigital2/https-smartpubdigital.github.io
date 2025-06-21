@@ -2,64 +2,53 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>StyleTogo - Boutique en ligne</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #333; color: #fff; padding: 20px; text-align: center; }
-    section { padding: 20px; }
-    footer { background: #333; color: #fff; text-align: center; padding: 10px; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    nav ul { list-style:none; display:flex; gap:15px; background:#333; padding:10px; margin:0; }
+    nav ul li a { color:#fff; text-decoration:none; }
+    nav ul li a:hover { text-decoration:underline; }
+    header { background:#f4f4f4; padding:20px; text-align:center; }
+    section { padding:20px; }
+    .produits { display:flex; gap:20px; flex-wrap: wrap; }
+    .produit { border:1px solid #ccc; padding:15px; width: 200px; }
+    footer { background:#333; color:#fff; text-align:center; padding:10px; margin-top:20px; }
   </style>
 </head>
-<body> 
+<body>
+
   <nav>
-<header>
-  <h1>Bienvenue sur StyleTogo</h1>
-  <p>Votre boutique en ligne dédiée aux vêtements et accessoires tendances.</p>
-</header>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="commande.html">Commander</a></li>
+    </ul>
+  </nav>
 
-<section>
-  <h2>Nos produits</h2>
-  <div style="display:flex; gap:20px; flex-wrap:wrap;">
-    <div style="border:1px solid #ccc; padding:10px; width:200px;">
-      <h3>T-shirt Classique</h3>
-      <p>Confortable et stylé, disponible en plusieurs couleurs.</p>
-      <p>Prix : 15€</p>
-    </div>
-    <div style="border:1px solid #ccc; padding:10px; width:200px;">
-      <h3>Casquette Urbaine</h3>
-      <p>Parfaite pour un look décontracté.</p>
-      <p>Prix : 10€</p>
-    </div>
-    <div style="border:1px solid #ccc; padding:10px; width:200px;">
-      <h3>Chaussures Sport</h3>
-      <p>Légères et résistantes pour toutes vos activités.</p>
-      <p>Prix : 30€</p>
-    </div>
-  </div>
-</section>
-
-<footer style="margin-top:40px; text-align:center; color:#555;">
-  &copy; 2025 StyleTogo. Tous droits réservés.
-</footer>
-  <ul style="list-style:none; display:flex; gap:20px; padding:10px; background:#0077cc;">
-    <li><a href="index.html" style="color:white; text-decoration:none;">Accueil</a></li>
-    <li><a href="commande.html" style="color:white; text-decoration:none;">Commander</a></li>
-  </ul>
-</nav>
   <header>
     <h1>Bienvenue sur StyleTogo</h1>
-    <p>Votre boutique en ligne dédiée à la mode et au style 100% tendance !</p>
+    <p>Votre boutique en ligne dédiée aux vêtements et accessoires</p>
   </header>
 
   <section>
     <h2>Nos produits</h2>
-    <p>Découvrez des vêtements, chaussures et accessoires sélectionnés pour vous.</p>
-    <p>Commandez facilement par WhatsApp !</p>
+    <div class="produits">
+      <div class="produit">
+        <h3>T-shirt Classique</h3>
+[21/06 à 13:00] ChatGPT: <p>Confortable et stylé, disponible en plusieurs tailles.</p>
+        <p>Prix : 15€</p>
+      </div>
+      <div class="produit">
+        <h3>Casquette Urbaine</h3>
+        <p>Parfaite pour un look décontracté et moderne.</p>
+        <p>Prix : 10€</p>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 StyleTogo - Tous droits réservés</p>
+    <p>© 2025 StyleTogo - Tous droits réservés</p>
   </footer>
+
 </body>
 </html>
