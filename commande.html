@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Commande - Smartrise Digital</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Commande - Smartrise Digital</title>
 </head>
 <body>
-<h2>Formulaire de commande</h2>
-<form>
-  <label for="nom">Nom complet :</label><br>
-  <input type="text" id="nom" name="nom" required><br><br>
-
-  <label for="email">Adresse e-mail :</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-
-  <label for="whatsapp">Numéro WhatsApp :</label><br>
-  <input type="tel" id="whatsapp" name="whatsapp" required><br><br>
-
-  <label for="produit">Produit :</label><br>
-  <input type="text" id="produit" name="produit" required><br><br>
-
-  <input type="submit" value="Envoyer">
-</form>
-
-<p>Nous vous contacterons dès que possible après réception de votre commande.</p>
   <h1>Commande</h1>
-  <p>Pour passer commande, envoyez les informations suivantes via WhatsApp :</p>
-  <ul>
-    <li>Nom complet</li>
-    <li>Nom du produit</li>
-    <li>Adresse e-mail (si nécessaire)</li>
-  </ul>
-  <p>
-    Cliquez ici pour nous écrire : 
-    <a href="https://wa.me/22896078137" target="_blank">WhatsApp Smartrise Digital</a>
-  </p>
+  <form id="commandeForm">
+    <label for="nom">Nom complet :</label><br />
+    <input type="text" id="nom" name="nom" required /><br /><br />
+
+    <label for="whatsapp">Numéro WhatsApp :</label><br />
+    <input type="tel" id="whatsapp" name="whatsapp" required placeholder="ex : 22896078137" /><br /><br />
+
+    <label for="produit">Produit :</label><br />
+    <input type="text" id="produit" name="produit" required /><br /><br />
+
+    <input type="submit" value="Envoyer la commande" />
+  </form>
+
+  <script>
+    document.getElementById('commandeForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nom = encodeURIComponent(document.getElementById('nom').value);
+      const whatsapp = document.getElementById('whatsapp').value.replace(/\D/g, '');
+      const produit = encodeURIComponent(document.getElementById('produit').value);
+
+      if (!whatsapp) {
+[21/06 à 12:30] ChatGPT: alert("Veuillez saisir un numéro WhatsApp valide.");
+        return;
+      }
+
+      // Construire le message
+      const message = `Bonjour, je souhaite passer commande.\nNom: nom:{produit}`;
+
+      // Ouvrir WhatsApp avec message pré-rempli
+      const url = `https://wa.me/whatsapp?text={message}`;
+      window.open(url, '_blank');
+    });
+  </script>
 </body>
 </html>
