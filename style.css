@@ -1,30 +1,9 @@
-
-```css
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 20px;
-}
-
-section {
-  margin: 20px;
-  font-size: 18px;
-}
-
-footer {
-  background-color: #222;
-  color: white;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-```
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    nav ul { list-style:none; display:flex; gap:15px; background:#333; padding:10px; margin:0; }
+    nav ul li a { color:#fff; text-decoration:none; }
+    nav ul li a:hover { text-decoration:underline; }
+    header { background:#f4f4f4; padding:20px; text-align:center; }
+    section { padding:20px; }
+    .produits { display:flex; gap:20px; flex-wrap: wrap; }
+    .produit { border:1px solid #ccc; padding:15px; width: 200px; }
+    footer { background:#333; color:#fff; text-align:center; padding:10px; margin-top:20px; }
